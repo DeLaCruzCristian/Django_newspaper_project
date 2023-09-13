@@ -30,9 +30,7 @@ SECRET_KEY = "IPYk7eM3dLO4k0lIjJqLcoWEqMWaLSaROYMdBIMaqfg"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "news-app-production-bcc0.up.railway.app"]
-
-CORS_ALLOW_ALL_ORIGINS: True
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -66,6 +64,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+CSRF_TRUSTED_ORIGIN = ["*"]
 
 ROOT_URLCONF = "django_project.urls"
 
