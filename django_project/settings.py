@@ -65,7 +65,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CSRF_TRUSTED_ORIGIN = ["*"]
+CSRF_TRUSTED_ORIGINS = ["*"]
 
 ROOT_URLCONF = "django_project.urls"
 
