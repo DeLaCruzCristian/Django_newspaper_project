@@ -64,8 +64,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-if not DEBUG:
-    CSRF_TRUSTED_ORIGINS = ["*"]
+
+CSRF_TRUSTED_ORIGINS = ["https://news-app-production-0576.up.railway.app"]
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 ROOT_URLCONF = "django_project.urls"
 
